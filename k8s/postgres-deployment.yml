@@ -19,11 +19,11 @@ spec:
       containers:
         - name: postgres
           image: postgres
-          resources:
-            limits: 
-              memory: "128Mi"
-              cpu: "500m"
-          ports:
+          # resources:
+          #   limits: 
+          #     memory: "128Mi"
+          #     cpu: "500m"
+          ports: 
             - containerPort: 5432
           volumeMounts:
             - name: postgres-storage
@@ -35,5 +35,3 @@ spec:
                 secretKeyRef:
                   name: pgpassword
                   key: PGPASSWORD
-
-              

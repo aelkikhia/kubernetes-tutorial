@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: worker-depoyment
+  name: worker-deployment
 spec:
   replicas: 1
   selector:
@@ -15,10 +15,10 @@ spec:
       containers:
       - name: worker
         image: aelkikhia/multi-worker
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
+        # resources:
+        #   limits:
+        #     memory: "128Mi"
+        #     cpu: "500m"
         env:
           - name: REDIS_HOST
             value: redis-cluster-ip-service
