@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+
+kind: Certificate
+metadata:
+  name: cerulean-sky-com-tls
+spec:
+  secretName: cerulean-sky-com
+  issueRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: cerulean-sky.com
+  dnsNames:
+    - cerulean-sky.com
+    - www.cerulean-sky.com
