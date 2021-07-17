@@ -28,6 +28,8 @@ reference - https://kubernetes.io/docs/concepts/storage/storage-classes/
 
 # secret (generic, tls, dockerregistry)
 `kubectl create secret generic postgres_password --from-literal <key>=<value>`
+example: 
+kubectl create secret generic pgpassword --from-literal PGPASSWORD=<password>
 
 
 # add ingress config
